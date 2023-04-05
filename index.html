@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://agentseed.org/imgs/A-pink.png">
+	<meta name="description" content="Agentseed's small corner of the interweb">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://agentseed.org">
+	<meta property="og:title" content="Agentseed">
+	<meta property="og:description" content="Agentseed's small corner of the interweb">
+	<meta name="theme-color" content="#ff41c6" />
+	<meta property="twitter:card" content="https://agentseed.org/imgs/banner.png">
+	<meta property="twitter:url" content="https://agentseed.org">
+	<meta property="twitter:title" content="Agentseed">
+	<meta property="twitter:description" content="Agentseed's small corner of the interweb">
+    <title>Agentseed</title>
+    <link rel="stylesheet" type="text/css" href="five.css">
+</head>
+<body onload="changeBackground(), updateLinks()">
+    <div class="buttons">
+        <span class="material-symbols-outlined pointer" onclick="changeBackground()">image</span>
+    </div>
+    <div class="buttons1">
+        <span id="theme" class="material-symbols-outlined pointer" onclick="changeTheme()">light_mode</span>
+    </div>
+    <div class="buttons2">
+        <a id="up" class="material-symbols-outlined pointer" href="#start" style="text-decoration: none;">expand_less</a>
+    </div>
+    <div id="start">
+        <img src="https://agentseed.org/imgs/A-pink.png" alt="logo" class="logo" id="logo">
+        <h1 id="title"><span id="title-span"></span>
+          <!-- <span class="stupid-accent-thing">_</span> -->
+        </h1>
+        <div class="menu" id="sidebar">
+            <p>If you see this for longer then a few seconds, the script that handles links isn't working, either you're blocking it, or there's some other problem. You can go into your brower console (f12) and run <code>updateLinks()</code>. Or you can view 
+            <a href="/sitemap">all the pages on my website</a></p>
+        </div>
+        <hr class="big-spacer">
+        <a href="#top" class="no-effects"><span class="material-symbols-outlined down-icon pointer" style="font-size: 50pt;" onclick="">expand_more</span></a>
+        <hr class="big-spacer">
+
+    </div>
+    <div class="main" id="top">
+        <br>
+        <center>
+        <div class="panel">
+            <h3>Transition</h3>
+            <p>Hello, sorry for the mess, I'm currently moving to a new design and a bunch of stuff may look weird or just be straight broken, there's lots of placeholder text and dead links. I'm also going to have an <i>actual</i> blog! That way it'll be a lot easier to organize and write posts (like this one).</p>
+            <p>If you notice something in particualar that's broken feel free to <a href="mailto:admin@agentseed.org">email me</a>.</p>
+        </div>
+        <br>
+        <div class="panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <br>
+        <div class="panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <br>
+        <div class="panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <br>
+        <div class="panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <br>
+        <div class="panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <p id="footer">This site is powered by <a href="https://en.wikipedia.org/wiki/Coffee">Coffee</a><a rel="me" href="https://mastodon.online/@Agentseed"></a></p>
+        </center>
+    </div>
+</body>
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+<script src="https://agentseed.org/changeTheme.js"></script>
+<script src="https://agentseed.org/changeImage.js"></script>
+<script src="https://agentseed.org/updateLinks.js"></script>
+<script>
+new TypeIt("#title-span", {
+  speed: 100,
+  strings: ["Agentseed", "Agentseed.org", "tsck", "A website", "A blog?", "[TITLE]", "I put words here", "...", "var title = 'Agentseed';"],
+  cursorChar: "_",
+  breakLines: false,
+  loop: true,
+  nextStringDelay: 2000,
+})
+.go();
+</script>
+</html>
