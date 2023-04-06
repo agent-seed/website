@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Rajdhani:wght@500&family=Tiro+Telugu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+:root {
+    --font-color: white; /* var(--font-color) */
+    --accent-color: rgb(255, 65, 198); /* var(--accent-color) */
+    --background-color: #111; /* var(--background-color) */
+    --font: monospace, "Tiro Telugu", serif; /* var(--default-font) */
+    --ellipsis: "...";
+    --panel-color: rgba(0, 0, 0, 0.095); /* var(--panel-color) */
+    --accent2: rgb(29, 29, 29); /* var(--accent2) */
+    --background: url(/pictures/1.JPG); /* this is for the random background thing, it'll display this image if the script doesn't run */
+    --blur: blur(100px) saturate(200%);
+    --theme: 'dark';
+    --ti-cursor-color: var(--accent-color);
+    --title-font: monospace;
+}
+#title-span {
+    font-size: 50pt;
+    font-family: var(--title-font);
+    color: var(--font-color);
+}
+.menu {
+    align-items: center;
+    display: block;
+    font-size: larger;
+    font-family: var(--font);
+}
+.menu a {
+    padding: 10px;
+    color: var(--font-color);
+}
+.menu a:hover {
+    border: var(--accent-color) dashed 1px;
+}
+#start {
+    background-color: var(--background-color);
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    left: 0px;
+    top: 0px;
+    color: var(--font-color);
+    z-index: 4;
+    height: 100%;
+
+}
+.transparent {
+    border-color: transparent;
+}
+.buttons2 {
+    position: fixed;
+    right: 10px;
+    bottom: 120px;
+    padding: 10px;
+    background: var(--panel-color);
+    -webkit-backdrop-filter: var(--blur);
+    backdrop-filter: var(--blur);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.247);
+    transition: 0.5s;
+    color: var(--font-color);
+    z-index: 3;
+    width: 25px;
+    height: 25px;
+}
+.buttons1 {
+    position: fixed;
+    right: 10px;
+    bottom: 65px;
+    padding: 10px;
+    background: var(--panel-color);
+    -webkit-backdrop-filter: var(--blur);
+    backdrop-filter: var(--blur);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.247);
+    transition: 0.5s;
+    color: var(--font-color);
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+}
+.buttons {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    background: var(--panel-color);
+    -webkit-backdrop-filter: var(--blur);
+    backdrop-filter: var(--blur);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.247);
+    transition: 0.5s;
+    color: var(--font-color);
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+}
+.buttons:hover, .buttons1:hover, .buttons2:hover {
+    border-color: var(--accent-color);
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.651);
+}
+.struckthrough {
+    text-decoration: line-through;
+    color: gray;
+}
+.struckthrough:hover {
+    text-decoration: none;
+    color: var(--font-color);
+}
+.sidebar hr {
+    border-color: var(--accent-color);
+    border-style: solid;
+}
+.logo {
+    position: relative;
+    display: inline;
+    padding: 0;
+    top: 20px;
+    font-size: 150pt;
+    color: var(--accent-color);
+    width: 150px;
+    transition: 300ms;
+}
+.logo:hover {
+    transform: scale(1.1);
+    border: var(--accent-color) dashed 1px;
+}
+.panel {
+    padding: 15px;
+    display: block;
+    align-items: center;
+    align-content: center;
+    width: 80%;
+    min-height: 200px;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--panel-color);
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.247);
+    transition: 0.5s;
+    -webkit-backdrop-filter: var(--blur);
+    backdrop-filter: var(--blur);
+    font-size: 16pt;
+    font-family: var(--font);
+    color: var(--font-color);
+    z-index: 1;
+}
+.panel:hover {
+    border-color: var(--accent-color);
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.651);
+}
+h1 {
+    font-weight: normal;
+}
+h2 {
+    font-weight: normal;
+}
+h3 {
+    font-weight: normal;
+}
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: var(--font);
+    text-align: center;
+    font-weight: normal;
+    background-image: var(--background) !important;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    transition: 0.5s;
+    width: 100%;
+    margin: 0px;
+}
+* {
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+::selection {
+    background-color: var(--accent-color);
+    color: var(--font-color);
+}
+::-moz-selection {
+    background-color: var(--accent-color);
+    color: var(--font-color);
+}
+p {
+    font-size: 15pt;
+}
+.sidebar {
+    position: fixed;
+    left: 10px;
+    width: 10%;
+    height: auto;
+    z-index: 2;
+    background-color: var(--panel-color);
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    padding: 10px;
+    text-overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.247);
+    transition: 0.5s;
+    -webkit-backdrop-filter: var(--blur);
+    backdrop-filter: var(--blur);
+}
+.sidebar:hover {
+    border-color: var(--accent-color);
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.651);
+}
+a {
+    color: var(--font-color);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    transition: 0.7s;
+    font-family: var(--font);
+}
+a:hover {
+    color: var(--accent-color);
+    transition: 0.7s;
+    /* background-color: rgba(255, 255, 255, 0.138); */
+}
+.sidebar a {
+    display: block;
+    font-size: 20px;
+    padding: 5px;
+    text-overflow: ellipsis;
+}
+.main-content {
+    padding-left: 15%;
+    padding-right: 15%;
+    background: transparent;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.pointer {
+    cursor: pointer;
+}
+.accent {
+    color: var(--accent-color);
+}
+.down-icon {
+    font-size: 50px;
+    height: -moz-fit-content;
+    height: fit-content;
+    transition: 0.5s;
+    color: var(--font-color);
+    /* animation: infinite wiggle 10s; */
+}
+.down-icon:hover {
+    transform: translate(0, 10px);
+    color: var(--accent-color);
+}
+.down-icon:active {
+    transform: rotate(180deg);
+}
+.no-effects {
+    border: none;
+}
+.no-effects:hover {
+    border: none;
+}
+footer {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+    
+.main {
+    scroll-snap-type: none;
+    scroll-snap-align: end;
+}
+.scroller {
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: both proximity;
+}
+.scroller section {
+    scroll-snap-align: start;
+    transition: 5s;
+}
+section {
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#footer, #footer a{
+    color: white !important;
+}
+#footer a:hover {
+    color: var(--accent-color) !important;
+}
+.big-spacer {
+    border-width: 137px;
+    border-color: transparent;
+
+}
+.stupid-accent-thing {
+    color: var(--accent-color);
+    animation: infinite flash 1s;
+    transition: 0ms;
+}
+@keyframes flash {
+    0%{color: transparent;}
+    50%{color: var(--accent-color);}
+    100%{color: transparent;}
+}
+ /* this was for the down icon, I thought it would be cool to have it wiggle, but I didn't look good */
+/* @keyframes wiggle {
+    0%{transform: translate(0px, 0px);transition: 500ms;}
+    10%{transform: translate(0px, 20px);transition: 500ms;}
+    20%{transform: translate(0px, 0px);transition: 500ms;}
+    30%{transform: translate(0px, 0px);transition: 500ms;}
+    40%{transform: translate(0px, 0px);transition: 500ms;}
+    50%{transform: translate(0px, 0px);transition: 500ms;}
+    60%{transform: translate(0px, 0px);transition: 500ms;}
+    70%{transform: translate(0px, 0px);transition: 500ms;}
+    80%{transform: translate(0px, 0px);transition: 500ms;}
+    90%{transform: translate(0px, 0px);transition: 500ms;}
+    100%{transform: translate(0px, 0px);transition: 500ms;}
+} */
