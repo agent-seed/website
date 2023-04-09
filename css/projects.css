@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+:root {
+    --accent: #ff41c6;
+    --font: 'Source Sans Pro', sans-serif;
+}
+.text-center {
+    text-align: center;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-auto-rows: 11rem;
+  gap: 1rem;
+  padding-bottom: 0.3rem;
+}
+.card {
+  backdrop-filter: blur(5000px);
+  transition: 500ms;
+  width: 1fr;
+  height: 10rem;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.5);
+}
+.card:hover {
+  transform: scale(104%);
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+  backdrop-filter: saturate(200%);
+}
+.card img {
+  max-width: 15rem;
+  border-radius: 50%;
+}
+.card-title {
+  font-size: 15pt;
+  font-weight: normal;
+}
+.card-link {
+  font-size: 15pt;
+  color: gray;
+}
+.card a {
+  text-decoration: none;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/imgs/a.png">
+	<meta name="description" content="Agentseed's small corner of the interweb">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://agentseed.org">
+	<meta property="og:title" content="Agentseed">
+    <meta property="og:image" content="/imgs/banner.png">
+	<meta property="og:description" content="Agentseed's small corner of the interweb">
+	<meta name="theme-color" content="#ff41c6">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://agentseed.org">
+	<meta property="twitter:title" content="Agentseed">
+	<meta property="twitter:description" content="Agentseed's small corner of the interweb">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <title>Agentseed</title>
+</head>
+<!-- sidebar, title and buttons -->
+<body onload="changeBackground(), updateLinks()">
+    <div class="buttons">
+        <span class="material-symbols-outlined pointer" onclick="changeBackground()">image</span>
+    </div>
+    <div class="buttons1">
+        <span id="theme" class="material-symbols-outlined pointer" onclick="changeTheme()">light_mode</span>
+    </div>
+    <a href="/"><img src="/imgs/a.png" alt="logo" class="logo" id="logo"></a>
+    <div class="sidebar" id="sidebar">
+        <p>If you see this, the script that handles links isn't working, either you're blocking it, or there's some other problem. You can go into your brower console (f12) and run <code>updateLinks()</code>. Or you can view all the 
+        <a href="/sitemap">pages on my website</a></p>
+    </div>
+
+<div class="main-content">
+<center>
+<h1 id="title-span"></h1>
+    <div class="panel">
+        <h2>[TITLE]</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In ut labore totam fugiat explicabo corporis, voluptatibus voluptatum cupiditate delectus magnam, illum distinctio aspernatur rerum, iure quasi vel omnis quos dignissimos.</p>
+        <a href="#">[LINK]</a>
+    </div>
+</div>
+</center>
+<center>
+<br>
+<p id="footer">This site is powered by <a href="https://en.wikipedia.org/wiki/Coffee">Coffee</a></p>
+</center>
+</body>
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+<script src="/js/changeTheme.js"></script>
+<script src="/js/changeImage.js"></script>
+<script src="/js/updateLinks.js"></script>
+<script>
+new TypeIt("#title-span", {
+  speed: 100,
+  strings: ["Agentseed", "Agentseed.org", "tsck", "A website", "A blog?", "[TITLE]", "I put words here", "...", "var title = 'Agentseed';"],
+  cursorChar: "_",
+  breakLines: false,
+  loop: true,
+  nextStringDelay: 2000,
+})
+.go();
+</script>
+</html>

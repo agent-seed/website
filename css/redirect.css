@@ -1,0 +1,33 @@
+body {
+    background: #222;
+    text-align: center;
+    color: rgb(150, 150, 150);
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;
+    user-select: none;
+}
+img {
+    max-width: 10rem;
+}
+a {
+    color: #ff41c6;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 10px;
+    background-color: #000;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 10px;
+    transition: 250ms;
+}
+.material-symbols-outlined:hover {
+    outline: 1px solid #ff41c6;
+}

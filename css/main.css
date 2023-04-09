@@ -9,7 +9,7 @@
     --ellipsis: "...";
     --panel-color: rgba(0, 0, 0, 0.095); /* var(--panel-color) */
     --accent2: rgb(29, 29, 29); /* var(--accent2) */
-    --background: url(/pictures/1.JPG); /* this is for the random background thing, it'll display this image if the script doesn't run */
+    --background: url(https://agentseed.org/imgs/dark.png), url(/pictures/1.JPG); /* this is for the random background thing, it'll display this image if the script doesn't run */
     --blur: blur(100px) saturate(200%);
     --theme: 'dark';
     --ti-cursor-color: var(--accent-color);
@@ -50,48 +50,19 @@
     border-color: transparent;
 }
 .buttons2 {
-    position: fixed;
     right: 10px;
     bottom: 120px;
-    padding: 10px;
-    background: var(--panel-color);
-    -webkit-backdrop-filter: var(--blur);
-    backdrop-filter: var(--blur);
-    border-radius: 10px;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 1px;
-    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.247);
-    transition: 0.5s;
-    color: var(--font-color);
-    z-index: 3;
-    width: 25px;
-    height: 25px;
 }
 .buttons1 {
-    position: fixed;
     right: 10px;
     bottom: 65px;
-    padding: 10px;
-    background: var(--panel-color);
-    -webkit-backdrop-filter: var(--blur);
-    backdrop-filter: var(--blur);
-    border-radius: 10px;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 1px;
-    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.247);
-    transition: 0.5s;
-    color: var(--font-color);
-    z-index: 2;
-    width: 25px;
-    height: 25px;
 }
 .buttons {
-    position: fixed;
     right: 10px;
     bottom: 10px;
-    padding: 10px;
+}
+.buttons, .buttons1, .buttons2 {
+    position: fixed;
     background: var(--panel-color);
     -webkit-backdrop-filter: var(--blur);
     backdrop-filter: var(--blur);
@@ -105,10 +76,13 @@
     z-index: 2;
     width: 25px;
     height: 25px;
+    padding: 10px;
+    user-select: none;
 }
 .buttons:hover, .buttons1:hover, .buttons2:hover {
     border-color: var(--accent-color);
     box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.651);
+    
 }
 .struckthrough {
     text-decoration: line-through;

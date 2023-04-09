@@ -1,11 +1,11 @@
 function updateLinks() {
     var link1url = '/'; link1text = 'Home';
-    var link2url = '/aboutme'; link2text = 'About Me';
+    var link2url = '/me'; link2text = 'About Me';
     var link3url = '/clock'; link3text = 'Clock';
     var link4url = '/spotify'; link4text = 'Spotify nowplaying';
-    var link5url = '/blog'; link5text = 'Blog (soon!)';
+    var link5url = '/blog'; link5text = 'Blog';
     var link6url = '/projects'; link6text = 'Projects';
-    var link7url = '/test'; link7text = 'Test';
+    var link7url = 'https://dev.agentseed.org'; link7text = 'Dev server';
     var link8url = 'https://github.com/agent-seed/agentseed.org'; link8text = 'Github';
     
     var link1 = '<a href="' + link1url + '">' + link1text + '</a>';

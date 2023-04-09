@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+:root {
+    --background: url(dark.png);
+    --div-icon: url(blackstone-bricks.webp);
+    --div-icon-reverse: url(stone-bricks.webp);
+    --sec-icon: url(coal.webp);
+    --blur: blur(2px);
+    --color: white;
+}
+body {
+background-image: var(--background);
+background-attachment: fixed;
+transition: 500ms;
+color: var(--color);
+}
+#logo {
+width: 300px;
+margin: auto;
+transform: translateX(-50%);
+margin-left: 50%;
+}
+.panel {
+width: 70rem;
+min-height: 5rem;
+background-image: var(--div-icon);
+background-size: 3%;
+background-repeat: repeat;
+margin: auto;
+text-align: center;
+transition: 500ms;
+padding: 20px;
+border: outset 2px red;
+}
+p {
+color: var(--color) !important;
+font-family: 'Overpass', sans-serif;
+font-size: 14pt;
+}
+h1, h2, h3, h4, h5, h6 {
+color: var(--color) !important;
+font-family: 'Overpass', sans-serif;
+}
+a {
+color: rgb(255, 0, 0);
+}
+::selection {
+background-color: red;
+}
+.center-align {
+text-align: center;
+}
+.left-align {
+text-align: left;
+}
+.font {
+font-family: 'Overpass', sans-serif;
+}
+code {
+-webkit-user-select: all;
+user-select: all;
+font-size: 12pt;
+background-color: rgba(0, 0, 0, 0.61);
+padding: 1px;
+margin: 2px;
+border-radius: 3px;
+color: white;
+border: solid 1px red;
+}
+.two-panel {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 20px;
+grid-row-gap: 20px;
+}
+.div1, .div2, .div69 {
+text-align: left;
+backdrop-filter: blur(1px);
+background-image: var(--sec-icon);
+padding: 20px;
+background-size: 7%;
+background-repeat: repeat;
+border: 2px red inset;
+line-height: 30px;
+}
+.div69 {
+padding: 20px;
+padding-left: 60px;
+}
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+
+#theme {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-image: var(--div-icon-reverse);
+width: 30px;
+height: 30px;
+background-size: contain;
+box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+border: none;
+transition: 250ms;
+}
+#theme:active {
+transform: translate(5px, 5px);
+box-shadow: none;
+}

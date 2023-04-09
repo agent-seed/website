@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me - Agentseed</title>
+    <script src="https://kit.fontawesome.com/3dd1a4167f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="/js/changeImage.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/me.css">
+</head>
+<body onload="changeBackground()">
+    <div id="page">
+        <div id="header">
+            <ul>
+                <li id="first"><a href="https://agentseed.org" class="no-underline"><span id="logo" class="accent">AGENTSEED</span></a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="https://github.com/agent-seed">GitHub</a></li>
+                <li><a href="/">Website</a></li>
+                <li><a href="/me">About</a></li>
+              </ul> 
+        </div>
+        <div id="content">
+            <h1 id="title">Hello, I'm <span class="accent" id="name">Agentseed</span></h1>
+            <h3 id="bio">Hey there, I'm Agentseed. I'm a frontend developer, a musician, and a photographer. If you'd like to contact me you can do that <a href="mailto:admin@agentseed.org">here (email)</a> or <a href="https://discord.com/users/687855724717801502">here (discord)</a>. I'm currently in the music department of a highschool for the arts, and I'm the general manager for <a href="https://zluqe.com">Zluqe</a></h3>
+            <div id="links">
+                <a href="https://discord.com/users/687855724717801502"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://reddit.com/r/Agentseed"><i class="fa-brands fa-reddit"></i></a>
+                <a href="https://steamcommunity.com/id/Agentseed"><i class="fa-brands fa-steam"></i></a>
+                <a href="https://github.com/agent-seed"><i class="fa-brands fa-github"></i></a>
+                <a href="https://instagram.com/agentseed"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/@Agentseed_"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://tiktok.com/@Agentseed"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://agentseed.tumblr.com"><i class="fa-brands fa-tumblr"></i></a>
+                <a rel="me" href="https://mastodon.online/@Agentseed"><i class="fa-brands fa-mastodon"></i></a>
+                <a href="https://agentseed.org/linktree"><i class="fa-solid fa-link"></i></a>
+                <a href="https://agentseed.org"><i class="fa-solid fa-globe"></i></a>
+                <a href="mailto:admin@agentseed.org"><i class="fa-solid fa-envelope"></i></a>
+                <a href="tel:15056908301"><i class="fa-solid fa-phone"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    new TypeIt("#name", {
+  strings: ["a developer", "a photographer", "a musician", "a gamer", "a "], 
+  speed: 75,
+  deleteSpeed: 50,
+  loop: true,
+  breakLines: false,
+  cursorChar: '_',
+}).go();
+</script>
+</html>

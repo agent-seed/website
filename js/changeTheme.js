@@ -29,7 +29,7 @@ function setThemeDark() {
 }
 function setThemeLight() {
     root.style.setProperty('--font-color', 'black');
-    root.style.setProperty('--panel-color', 'rgba(255, 255, 255, 0.095');
+    root.style.setProperty('--panel-color', 'rgba(255, 255, 255, 0.2');
     root.style.setProperty('--background-color', 'white');
     themeButton.innerHTML = 'dark_mode';
     localStorage.setItem("theme", "light") // sets the localstorage element "theme" to light

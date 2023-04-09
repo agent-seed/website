@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+:root {
+    --accent: #ff41c6;
+    --font: 'Source Sans Pro', sans-serif;
+    --background: ;
+}
+#header {
+    background-color: #00000085;
+    max-height: 5rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    backdrop-filter: blur(10px);
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#first {
+    float: left;
+
+}
+li {
+    display: inline;
+    float: right;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+}
+#logo {
+    font-size: 30pt;
+    font-family: monospace;
+    font-weight: 900;
+    text-decoration: none;
+}
+@media screen and (max-width: 800px) {
+  li {float: left;}
+}
+#content {
+    /* margin-top: 30rem; */
+    text-align: center;
+    max-width: 70%;
+    margin-left: 15%;
+    margin-top: 15%;
+    transition: translate(-50%, -50%);
+    position: absolute;
+}
+#name {
+    font-family: monospace;
+    background-color: #00000085;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px;
+    padding-right: 20px;
+    font-size: 25pt;
+    -webkit-user-select: none;
+    user-select: none;
+    backdrop-filter: blur(10px);
+}
+#links {
+    word-spacing: 2rem;
+}
+.accent {
+    color: var(--accent);
+}
+.fa-brands, .fa-solid, .fa-regular {
+    color: white;
+    font-size: 20pt;
+    transition: 500ms;
+    line-height: 40px;
+}
+.fa-brands:hover, .fa-solid:hover {
+    color: var(--accent);
+    transform: scale(120%);
+}
+.no-underline {
+    text-decoration: none;
+}
+#page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    -webkit-accent-color: var(--accent);
+    accent-color: var(--accent);
+    color: white;
+    font-family: var(--font);
+    
+    backdrop-filter: brightness(60%) saturate(10%);
+}
+body {
+    background-color: #111;
+    background-image: var(--background);
+    background-size: cover;
+}
+#bio a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+
+}
+#bio a:hover {
+    color: var(--accent);
+}

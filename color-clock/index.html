@@ -1,0 +1,84 @@
+
+
+<html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <title>Color Clock</title>
+    <script src="https://code.jquery.com/jquery-latest.js"/></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+    <meta name="Keywords" content="scc-cpio-1sqqf">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    </head>
+    <body>
+    <div class="background">
+    <div class="absolute-center">
+    <p id="hex"></p>
+    </div>
+    </div>
+    </body>
+    </html>
+    <style>
+        
+
+html body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  vertical-align: middle;
+}
+
+#hex {
+  color: white;
+  font-family: 'Lato', Helvetiva, Arial, sans-serif;
+  text-align: center;
+  font-size: 4.5em;
+  display: block;
+  min-width: 200px;
+  font-weight: 100;
+}
+
+.absolute-center {
+  /*width: 50%;*/
+    margin: auto;
+    position: absolute;
+    top: 50%; left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+    </style>
+ <script>
+    
+
+function refreshData()
+{
+    x = 1;  // x = seconds
+  var d = new Date()
+  var h = d.getHours();
+  var m = d.getMinutes();
+  var s = d.getSeconds();
+  
+  if (h<=9) {h = '0'+h};
+  if (m<=9) {m = '0'+m};
+  if (s<=9) {s = '0'+s};
+  
+  var color = '#'+h+m+s;
+  
+    $("div.background").css("background-color", color );
+    $("p#hex").text(color);
+     
+    setTimeout(refreshData, x*1000);
+}
+  
+refreshData(); // execute function
+
+
+ </script>   

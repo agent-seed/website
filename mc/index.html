@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/imgs/a.png">
+	<meta name="description" content="Agentseed's small corner of the interweb">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://agentseed.org">
+	<meta property="og:title" content="Agentseed">
+    <meta property="og:image" content="/imgs/banner.png">
+	<meta property="og:description" content="Agentseed's small corner of the interweb">
+	<meta name="theme-color" content="#ff41c6">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://agentseed.org">
+	<meta property="twitter:title" content="Agentseed">
+	<meta property="twitter:description" content="Agentseed's small corner of the interweb">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <title>Agentseed</title>
+</head>
+<!-- sidebar, title and buttons -->
+<body onload="changeBackground(), updateLinks()">
+    <div class="buttons">
+        <span class="material-symbols-outlined pointer" onclick="changeBackground()">image</span>
+    </div>
+    <div class="buttons1">
+        <span id="theme" class="material-symbols-outlined pointer" onclick="changeTheme()">light_mode</span>
+    </div>
+    <a href="/"><img src="/imgs/a.png" alt="logo" class="logo" id="logo"></a>
+    <div class="sidebar" id="sidebar">
+        <p>If you see this, the script that handles links isn't working, either you're blocking it, or there's some other problem. You can go into your brower console (f12) and run <code>updateLinks()</code>. Or you can view all the 
+        <a href="/sitemap">pages on my website</a></p>
+    </div>
+
+<div class="main-content">
+<center>
+<h1 id="title-span"></h1>
+    <div class="panel">
+        <h3 class="center-align">Rules</h3>
+        <ol class="font">
+            <li>No greifing</li>
+            <li>No stealing</li>
+            <li>No hacking</li>
+            <li>No Xray</li>
+            <li>No begging for OP</li>
+            <li>Listen to all staff</li>
+        </ol>
+    </div>
+    <br>
+    <div class="panel">
+        <h3 class="center-align">Features</h3>
+        <ul class="font">
+            <li>Small community</li>
+            <li>Quality of life mods</li>
+            <li>No plots</li>
+            <li>No invasive anti-cheat</li>
+            <li>Whitelist</li>
+            <li>Dedicated server</li>
+        </ul>
+    </div>
+    <br>
+    <div class="panel">
+        <h3 class="center-align">Server specs</h3>
+        <ul class="font">
+            <li>5gb ddr4</li>
+            <li>500gb disk</li>
+            <li>1tb network</li>
+            <li>Paper 1.19.3</li>
+            <li>10 player slots</li>
+            <li>Always online</li>
+            <li>Denver US location</li>
+        </ul>
+    </div>
+    <br>
+    <div class="panel">
+        <h3 class="center-align">Plugins</h3>
+        <ul class="font">
+            <li>Viaversion</li>
+            <li>SimpleTPA</li>
+            <li>SetHome</li>
+            <li>gSit</li>
+            <li>Timber</li>
+            <li>NoCreeperGrief</li>
+            <li>DiscordSRV</li>
+        </ul>
+    </div>
+    <br>
+    <div class="panel">
+        <h2>How to join</h2>
+        <ol class="font div69">
+            <li>Join the <a href="https://discord.gg/">Discord</a> and open a ticket in <a href="https://discord.com/channels/">#ticket</a> and ask to whitelisted, please include your minecraft username</li><!--TODO: add links -->
+            <li>Please insure you're running the correct version of minecraft (1.19.3) I also recommend <a href="https://optifine.net">Optifine</a> for a performance boost</li>
+            <li>The server IP is <code>mc.agentseed.org</code>, the backup ip is <code>66.11.118.98</code></li>
+            <li>If you have any problems, don't hesitate to <a href="https://discord.com/users/687855724717801502">Contact me</a></li>
+        </ol>
+    </div>
+</div>
+</center>
+<center>
+<br>
+<p id="footer">This site is powered by <a href="https://en.wikipedia.org/wiki/Coffee">Coffee</a></p>
+</center>
+</body>
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+<script src="/js/changeTheme.js"></script>
+<script src="/js/changeImage.js"></script>
+<script src="/js/updateLinks.js"></script>
+<script>
+new TypeIt("#title-span", {
+  speed: 100,
+  strings: ["Agentseed Network", "Minecraft server", "MariaMC", "5gSMP", "A lightly modded minecraft smp"],
+  cursorChar: "_",
+  breakLines: false,
+  loop: true,
+  nextStringDelay: 2000,
+})
+.go();
+</script>
+</html>
