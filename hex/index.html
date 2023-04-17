@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex color: </title>
+</head>
+<body>
+    <h1 id="hex"></h1>
+</body>
+<style>
+:root {
+    --hex: #000;
+}
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100pt;
+}
+body {
+    background-color: var(--hex);
+}
+</style>
+<script>
+    var text = document.getElementById('hex');
+    let root = document.documentElement;
+    var input = '';
+    var hex = '';
+    function getHex() {
+        input = window.location.href
+        hex = input.split('?')[1];
+        if (hex[0] === '#') {
+            printHex()
+        } else {
+            hex = '#' + hex
+            printHex()
+        }
+    }
+    function printHex() {
+        document.title = 'Hex color ' + hex;
+        text.innerHTML = hex;
+        root.style.setProperty('--hex', hex)
+    }
+    getHex()
+</script>
+</html>
