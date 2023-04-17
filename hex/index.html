@@ -31,9 +31,11 @@ body {
         input = window.location.href
         hex = input.split('?')[1];
         if (hex[0] === '#') {
+            hex = hex.slice(0, 7)
             printHex()
         } else {
             hex = '#' + hex
+            hex = hex.slice(0, 7)
             printHex()
         }
     }
