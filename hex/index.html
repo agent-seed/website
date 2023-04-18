@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hex color: </title>
+    <title>Hex Colors</title>
 </head>
 <body>
-    <h1 id="hex"></h1>
+    <div class="panel">
+        <h1 id="hex">Hex Colors</h1>
+        <button onclick="randomColor()">🔀</button>
+        <button onclick="copy()">📋</button>
+        <!-- <button onclick="share()">📩</button> -->
+    </div>
 </body>
 <style>
 :root {
@@ -15,14 +20,41 @@
 }
 h1 {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: monospace;
     font-size: 100pt;
+}
+.panel {
+    position: absolute;
+    top: 0vh;
+    left: 5vw;
+    line-height: 30px;
 }
 body {
     background-color: var(--hex);
 }
+button {
+    background: none;
+    border: none;
+    padding: none;
+    margin: none;
+    font-size: 40pt;
+    cursor: pointer;
+}
+button:active {
+    transform: scale(96%);
+}
 </style>
 <script>
+    function randomColor() {
+        const hexChars = "0123456789ABCDEF";
+        let colorCode = "#";
+        for (let i = 0; i < 6; i++) {
+            const randomIndex = Math.floor(Math.random() * hexChars.length);
+            colorCode += hexChars[randomIndex];
+        }
+        hex = colorCode;
+        printHex()
+    }
     var text = document.getElementById('hex');
     let root = document.documentElement;
     var input = '';
@@ -44,6 +76,13 @@ body {
         text.innerHTML = hex;
         root.style.setProperty('--hex', hex)
     }
+    function copy() {
+        navigator.clipboard.writeText(hex);
+    }
+    // function share() {
+    //     navigator.clipboard.writeText('https://agentseed.org/hex?' + hex);
+    //     navigator.share(url, 'https://agentseed.org/hex?' + hex);
+    // }
     getHex()
 </script>
 </html>
