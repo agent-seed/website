@@ -1,0 +1,81 @@
+<!-- https://www.youtube.com/results?search_query= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube search</title>
+</head>
+<body>
+    <form method="get" action="https://www.youtube.com/results" id="search-parent">
+    <input type="text" name="search_query" size="31" value="" placeholder='Search YouTube' id="searchbox" autofocus>
+    </form>
+<style>
+:root {
+    --font: monospace;
+    --blur: 50px;
+    --background: #111;
+    --background-color: #111;
+    --text-color: white;
+    --color: magenta;
+    --padding: 5px;
+    --radius: 10px;
+}
+body {
+    background-color: #111;
+    background-image: var(--background);
+    background-size: cover;
+    background-repeat: repeat;
+    font: var(--font);
+    font-family: var(--font) !important;
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+}
+#searchbox {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: var(--padding);
+  top: 50%;
+  left: 50%;
+  
+  background: transparent;
+  border: 1px solid red;
+  border-radius: var(--radius);
+  font-size: 20pt;
+  color: var(--text-color);
+  -webkit-backdrop-filter: blur(var(--blur));
+  -moz-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(var(--blur));
+  font-family: var(--font);
+  color: white !important;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px red;
+  animation: fade 4s infinite;
+}
+#searchbox::placeholder {
+    color: red;
+}
+#searchbox:enabled {
+    border-color: red;
+}
+#searchbox:focus-visible {
+    border-color: red;
+}
+#searchbox:focus {
+    box-shadow: 0px 0px 10px 0px red;
+}
+@keyframes fade {
+    0% {
+        box-shadow: 0px 0px 30px 0px red;  
+    }
+    50% {
+        box-shadow: 0px 0px 10px 0px red;
+    }
+    100% {
+        box-shadow: 0px 0px 30px 0px red;
+    }
+}
+</style>
+</html>
