@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain parked by Agentseed Industries</title>
+</head>
+<body>
+    <div id="content">
+        <h3>Domain parked by</h3>
+        <h1 class="accent">Agentseed Industries</h1>
+        <a href="https://agentseed.org"><button type="button" id="left">Website</button></a>
+        <a href="https://agentseed.org/contact"><button type="button" id="right">Contact</button></a>
+    </div>
+</body>
+<style>
+    body {
+        background-image: url(https://agentseed.org/imgs/parked-bg-blurred.png);
+        background-size: cover;
+    }
+    #content {
+        display: flexbox;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    button {
+        background-color: transparent;
+        padding: 0.8rem;
+        border: 1px magenta solid;
+        color: white;
+        backdrop-filter: blur(20px);
+        box-shadow: 0px 0px 5px 0px magenta;
+        text-align: center;
+        transition: 250ms;
+        font-size: large;
+    }
+    #left {
+        border-radius: 20px 0px 0px 20px;
+    }
+    #right {
+        border-radius: 0px 20px 20px 0px;
+    }
+    button:hover {
+        backdrop-filter: blur(200px);
+        box-shadow: 0px 0px 30px 10px magenta;
+        background-color: magenta;
+    }
+</style>
+</html>
