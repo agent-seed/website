@@ -71,8 +71,8 @@ function refreshData()
     var displayH = (h12 <= 9) ? '0' + h12 : h12;
     var displayM = (m <= 9) ? '0' + m : m;
     var displayS = (s <= 9) ? '0' + s : s;
-    // var color = '#' + displayH + displayM + displayS;
-    var color = '#' + h24 + m + s;
+    var color = '#' + displayH + displayM + displayS;
+    // var color = '#' + h24 + m + s;
     var text = displayH + ':' + displayM + ':' + displayS;
   
     $("div.background").css("background-color", color );
