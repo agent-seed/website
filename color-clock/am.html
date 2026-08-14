@@ -73,6 +73,7 @@ function refreshData()
     var displayS = (s <= 9) ? '0' + s : s;
     // var color = '#' + displayH + displayM + displayS;
     var color = '#' + h24 + m + s;
+    var text = displayH + ':' + displayM + ':' + displayS;
   
     $("div.background").css("background-color", color );
     $("p#hex").text(color + " " + ampm);
