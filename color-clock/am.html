@@ -76,7 +76,7 @@ function refreshData()
     var text = displayH + ':' + displayM + ':' + displayS;
   
     $("div.background").css("background-color", color );
-    $("p#hex").text(color + " " + ampm);
+    $("p#hex").text(text + " " + ampm);
 
     setTimeout(refreshData, x * 1000);
 }
